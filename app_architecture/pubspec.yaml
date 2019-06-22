@@ -1,0 +1,24 @@
+name: app_architecture
+description: app architecture example
+version: 0.0.1+1
+
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  flutter_simple_dependency_injection: any
+  cupertino_icons: ^0.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  intl_translation: ^0.17.1
+
+
+flutter:
+  uses-material-design: true

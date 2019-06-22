@@ -1,0 +1,13 @@
+{
+  "@@last_modified": "2019-06-22T11:56:13.970154",
+  "Two": "Two",
+  "@Two": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "One": "One",
+  "@One": {
+    "type": "text",
+    "placeholders": {}
+  }
+}
