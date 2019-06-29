@@ -93,7 +93,7 @@ abstract class <Name>Bloc extends Closeable {
 
 We inject all logic we need for widget in BLoC in widget Factory.
 
-All Units for BLoC should have single responsibility and they should be abstractions. 
+All Dependencies for BLoC should have single responsibility and they should be abstractions. 
 
 
 
