@@ -4,16 +4,17 @@ Flutter app architecture we use.
 
 WBF = Widget BLoC Factory
 
-SOLID principles are core of this acrhitecture.
+SOLID principles are the core of this acrhitecture.
 
 It is improved BLoC pattern proposed by Google + Factory.
 
 
 We use DI pattern, with [this simple library](https://pub.dev/packages/flutter_simple_dependency_injection)
 
-Every Module for Statefull Widget has following structure:
+Every Module for Statefull Widget has the following structure:
 
-1. Factory - factory that create Widget. 
+#### Factory
+Factory that creates Widget. 
 
 ```Dart
   abstract class WidgetFactory {
@@ -21,7 +22,7 @@ Every Module for Statefull Widget has following structure:
   }
 ```
 
-BaseFactory contains DI Container, so we can inject in Widget Whatever we want.
+BaseFactory contains DI Container, so we can inject in Widget whatever we want.
 
 ```Dart
   class BaseFactory{
@@ -50,11 +51,11 @@ For example:
 }
 
 ```
-2. Widget
+#### Widget
 
 Statefull Widget. 
 
-Widget itself contains dependencies
+Widget itself contains the dependencies.
 
 ```Dart
   class <Name>Widget extends StatefulWidget {
@@ -73,11 +74,11 @@ Widget itself contains dependencies
 }
 ```
 
-State contains binding for BLoC streams.
+State contains the bindings for BLoC streams.
 
-3. BLoC. 
+#### BLoC 
 
-Basically ViewModel in MVVM pattern. It has streams with ready to use data for Widget.
+Basically, BLoC is a ViewModel in MVVM pattern. It has streams with ready to use data for Widget.
 
 ```Dart
 
@@ -92,7 +93,7 @@ abstract class <Name>Bloc extends Closeable {
 
 We inject all logic we need for widget in BLoC in widget Factory.
 
-All Units for BLoC should have single responsibility, and should be abstractions. 
+All Units for BLoC should have single responsibility and they should be abstractions. 
 
 
 
